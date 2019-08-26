@@ -373,6 +373,7 @@ public class read_spreadsheets_workshops {
     }
 
     /*This Method outputs the excel file a valid formatted .json file.
+    This was a quick/dirty version of the code com.googlecode.json-simple is way to go given more cycles.
      */
     public void writeJson() {
         try {
@@ -638,8 +639,8 @@ public class read_spreadsheets_workshops {
 
 
     public static void main(String[] args) {
-        String filepath ="C:\\temp\\sf_rpts\\";
-        String json_path="C:\\temp\\sf_rpts\\json\\";
+        String filepath ="C:\\temp\\sfwebloganalysis\\src\\main\\sample_file\\";
+        String json_path="C:\\temp\\sfwebloganalysis\\src\\main\\sample_file\\json\\";
         String filename ="";
         int file_count =0;
 
@@ -674,8 +675,10 @@ public class read_spreadsheets_workshops {
 
         //output global stats
           a.getStatsGlobal(file_count,"Workshop Stats Distribution");
+         //output json
          a.writeJson();
-          a.accessByGroup();
+         //output group analysis
+         a.accessByGroup();
         System.exit(0);
     }
 }
