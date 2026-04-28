@@ -1,9 +1,38 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
+.mvn/
 
-### IntelliJ IDEA ###
+### IDEs ###
+# IntelliJ
 .idea
 *.iws
 *.iml
 *.ipr
 
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Logs and Temps ###
+*.log
+*~
+*.bak
+*.swp
+
+### Java Specific ###
+*.class
+*.jar
+
+### Project Specific ###
+reports/
+*.csv  # If generated during log analysis
+.env
+local.properties
